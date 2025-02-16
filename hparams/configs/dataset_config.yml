@@ -1,0 +1,27 @@
+batch_size: 1000 
+max_repos: 1
+work_nums: 50
+
+# libs: ['torch', 'pandas', 'numpy', 'tensorflow', 'flask', 'django', 'matplotlib']     # libraries' name that you want to search for
+# lib_names: ['torch', 'pandas', 'numpy', 'tensorflow', 'flask', 'django', 'matplotlib']
+# versions: [['2.0.0', '2.5.0'], ['2.0.3', '2.1.4'], ['1.24', '2.1'], ['2.11.0', '2.18.0'], ['2.2.2', '3.0.0'], ['4.1.4', '5.1.4'], ['3.8', '3.9']]              # outdated & latest version of each library
+libs: ['torch']
+lib_names: ['torch']
+versions: [['2.0.0', '2.5.0']]
+
+jsonl_switch_dir: '/media/sata7t/wcloong/CodeSync_Playground_Dataset/Data_Demo'    
+
+raw_data_dir: '/media/sata7t/wcloong/init_files'  # metadata saving path
+data_dir: '/media/sata7t/wcloong/init_dir'  # dataset saving dir
+benchmark_dir: '/media/sata7t/wcloong/CodeSync_Playground_Dataset/Benchmark_Demo' # benchmark saving dir
+training_set_dir: 'Training_Set'                              # training set saving dir
+
+mirror: 'https://pypi.tuna.tsinghua.edu.cn/simple'
+llm_api: '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'
+# llm_url: 'https://api.deepseek.com'
+llm_url: 'https://api.openai.com/v1'
+llm_name: 'gpt-4o-mini'
+
+time_limit: "2024-01-01T00:00:00Z"
+
+token: ["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", "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", "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"]
