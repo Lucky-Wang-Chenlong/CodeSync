@@ -17,15 +17,15 @@
 
 
 
-## Contents
+## :memo: Contents
 
 - [💡 Updates \& News](#-updates--news)
-- [Contents](#contents)
+- [:memo: Contents](#:memo:-contents)
 - [💾 CODESYNC](#-codesync)
 - [🚀 Execution](#-execution)
 - [🤗 Contributing](#-contributing)
 - [👍 Acknowledgement](#-acknowledgement)
-- [Citation](#citation)
+- [⭐ Citation](#⭐-citation)
 
 
 <!-- ## Installation -->
@@ -70,7 +70,7 @@ We also thank these great projects:
 - [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) is a reliable framework for tuning models
 - [BigCode-Evaluation](https://github.com/bigcode-project/bigcode-evaluation-harness) is an excellent framework for evaluation of code generation models.
 
-## Citation
+## ⭐ Citation
 
 ```
 @misc{wang2025codesync,
@@ -82,4 +82,4 @@ We also thank these great projects:
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2502.16645}, 
 }
-``
+```
