@@ -1,7 +1,6 @@
 <div align="center">
 <h1>CODESYNC: Synchronizing Large Language Models with Dynamic Code Evolution at Scale </h1>
 
-[![Website](https://img.shields.io/badge/Website-%F0%9F%8C%8D-blue?style=for-the-badge&logoWidth=40)]()
 [![Paper](https://img.shields.io/badge/Paper-%F0%9F%8E%93-lightgrey?style=for-the-badge&logoWidth=40)](https://arxiv.org/abs/2502.16645)
 [![Dataset](https://img.shields.io/badge/Dataset-%F0%9F%92%BE-green?style=for-the-badge&logoWidth=40)]()
 
