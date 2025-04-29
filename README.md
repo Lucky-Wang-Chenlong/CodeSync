@@ -31,7 +31,8 @@
 
 ## 💾 CODESYNC
 
-⚠️ **Work in progress**
+⚠️ **Work in progress** 
+P.S. We will finish the program until June.
 
 `CodeSync` is a data engine used for generating training set and benchmark automatically to assess the capabilities of LLMs on synchronizing with specific-version APIs. 
 
