@@ -12,8 +12,8 @@
 </div>
 
 ## 💡 Updates & News
+- [01/05/2025] : Our paper has been accepted by [ICML 2025](https://icml.cc/)!
 - [25/02/2025] :page_facing_up: Our paper has been released on [Arxiv](https://arxiv.org/abs/2502.16645) today!
-
 
 
 ## :memo: Contents
