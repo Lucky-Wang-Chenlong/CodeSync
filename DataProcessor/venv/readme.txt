@@ -1,1 +1,0 @@
-Virtual environment saving directory
