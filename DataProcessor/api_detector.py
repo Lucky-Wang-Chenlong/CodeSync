@@ -2,19 +2,16 @@ import ast
 import json
 import os
 import re
-import yaml
-import importlib
 import textwrap
-from collections import deque
 from datasets import load_dataset
 from collections import defaultdict
 from multiprocessing import Pool, cpu_count
 from tqdm import tqdm
-from datetime import datetime
 
 from hparams.get_config import get_dataset_config, Config
 from util.path import jsonl_file_search
 from util.prompt_prosessor import sample_processor
+from step2_method_invoke_match import method_api_detector
 
 
 
@@ -208,8 +205,8 @@ def process_sample(info):
     return find_api_calling_functions(info['lib'], info['sample'])
 
 
-def api_detector(config):
-    files = jsonl_file_search(config.raw_data_dir)
+def function_api_detector(config):
+    files = jsonl_file_search(os.path.join(config.raw_data_dir, 'function'))
     ds = load_dataset('json', data_files=files, split='train')    
     max_cnt = ds.num_rows
     if not os.path.exists(config.data_dir):
@@ -222,8 +219,6 @@ def api_detector(config):
             data_dir = os.path.join(config.data_dir, lib)
             if not os.path.exists(data_dir):
                 os.mkdir(data_dir)
-            print(f'Detecting {lib} API calling statements currently...')
-            print(f'Results will be save to \"{data_dir}\".')
             for batch_start in tqdm(range(0, len(ds), config.batch_size)):
                 batch = [{'lib':lib, 'sample':ds[i]} for i in range(batch_start, min(max_cnt, batch_start + config.batch_size))]
                 results = pool.map(process_sample, batch)
@@ -239,8 +234,13 @@ def api_detector(config):
                         codes = []
             write_to_jsonl(codes, data_dir)
             codes = []
-            print('-' * 20)
-    
+
+
+
+def api_detector(config):
+    function_api_detector(config)
+    method_api_detector(config)
+
     # for lib in config.lib_names: 
     #     data_dir = os.path.join(config.data_dir, lib)
     #     if not os.path.exists(data_dir):

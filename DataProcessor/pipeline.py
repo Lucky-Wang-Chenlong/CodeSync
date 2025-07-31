@@ -92,9 +92,19 @@ def pipeline(crawling=False,                # crawl repos from GitHub
     # crawl repos from GitHub, save raw data to config.raw_data_dir
     if crawling:
         print('-' * 80 + '\nCrawling API invocations for functions..')
-        repo_crawler(config, modified_functions_list, 'function')
+        # repo_crawler(config, modified_functions_list, 'function')
+        repo_crawler(
+            modified_functions_list, 
+            root=os.path.join(config.raw_data_dir, 'function'), 
+            config=config
+        )
         print('-' * 40 + '\nCrawling API invocations for methods..')
-        repo_crawler(config, modified_methods_list, 'method')
+        # repo_crawler(config, modified_methods_list, 'method')
+        repo_crawler(
+            modified_methods_list, 
+            root=os.path.join(config.raw_data_dir, 'method'), 
+            config=config
+        )
         print('-' * 40 + '\nFinish crawling repo API invocations successfully!')
     else:
         print('-' * 80 + '\nSkip crawling repo step ...')    
@@ -169,14 +179,6 @@ def pipeline(crawling=False,                # crawl repos from GitHub
         print('Benchmark Constructing Successfully!')
 
 
-
-# if __name__ == '__main__':
-#     pipeline(crawling=False,
-#              api_extractor=True,
-#              data_filter=False,
-#              update_code=False,
-#              construct_benchmark=False,
-#              convert_required=False)
 
 
 if __name__ == '__main__':
