@@ -2,7 +2,7 @@
 <h1>CODESYNC: Synchronizing Large Language Models with Dynamic Code Evolution at Scale </h1>
 
 [![Paper](https://img.shields.io/badge/Paper-%F0%9F%8E%93-lightgrey?style=for-the-badge&logoWidth=40)](https://arxiv.org/abs/2502.16645)
-[![Dataset](https://img.shields.io/badge/Dataset-%F0%9F%92%BE-green?style=for-the-badge&logoWidth=40)](https://huggingface.co/datasets/LuckyVoyage/CodeSyncBench)
+[![Dataset](https://img.shields.io/badge/Dataset-%F0%9F%92%BE-green?style=for-the-badge&logoWidth=40)]()
 
 <img src="Figures/pipeline.png">
 <img src="Figures/result.png">
