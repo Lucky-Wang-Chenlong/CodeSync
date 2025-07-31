@@ -12,6 +12,7 @@ raw_data_dir: 'CodeSync/Raw_Data'            # metadata saving path
 data_dir: 'CodeSync/Data'                    # dataset saving dir
 benchmark_dir: 'CodeSync/Benchmark'          # benchmark saving dir
 training_set_dir: 'CodeSync/TrainingSet'     # training set saving dir
+temp_dir: 'CodeSync/Temp'       
 
 mirror: 'https://pypi.tuna.tsinghua.edu.cn/simple'
 llm_api: 'sk-proj-xxx'
